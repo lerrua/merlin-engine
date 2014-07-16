@@ -1,14 +1,6 @@
-
-
 class Prepare(object):
     """
-    Prepare the champions for the battle!
-
-    Usage:
-        hero = Prepare(name="Aragorn", base_attack=100, base_hp=100)
-    or like this:
-        aragorn = {"name": "Aragorn", "base_attack": 100, "base_hp": 100}
-        hero = Prepare(**aragorn)
+        Prepare the champions for the battle!
     """
     def __init__(self, name, base_attack, base_hp):
         self.name = name
@@ -31,3 +23,8 @@ class Prepare(object):
         if foe.base_hp <= 0:
             print 'foe is dead.'
         return foe.base_hp
+
+    def collect(self, foe):
+        if not isinstance(foe, Prepare):
+            raise TypeError('foe should be a Prepare object')
+        pass
