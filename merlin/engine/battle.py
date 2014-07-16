@@ -15,6 +15,10 @@ class Prepare(object):
         self.base_attack = base_attack
         self.base_hp = base_hp
 
+    @property
+    def status(self):
+        return self.__dict__
+
     def attack(self, foe):
         if not isinstance(foe, Prepare):
             raise TypeError('foe should be a Prepare object')
