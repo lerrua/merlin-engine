@@ -25,10 +25,10 @@ Prepare opponents for the battle, basically are two dicts with attributes 'base_
 >>> from merlin.engine.battle import Prepare
 
 # using sample characters and monsters
->>> from merlin.fixtures import ARAGORN, ORC
+>>> from merlin.fixtures import aragorn, orc
 
->>> hero = Prepare(ARAGORN)
->>> foe = Prepare(ORC)
+>>> hero = Prepare(aragorn)
+>>> foe = Prepare(orc)
 
 >>> foe.status
 {'base_hp': 90, 'name': 'Orc', 'base_attack': 20}
@@ -60,8 +60,6 @@ Traceback (most recent call last):
     raise Exception('foe is already dead! Stop hit him!')
 Exception: foe is already dead! Stop hit him!
 
-
 # don't hit the dead body, collect the droppable items
 >>> hero.collect(foe)
 ```
-

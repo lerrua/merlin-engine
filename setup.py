@@ -2,7 +2,6 @@ from setuptools import setup, find_packages
 
 import merlin
 
-
 classifiers = [
     'Development Status :: 1 - Planning'
     'Intended Audience :: Developers',
@@ -20,7 +19,6 @@ try:
 except:
     long_description = merlin.__description__
 
-
 setup(name='merlin',
       version=merlin.__version__,
       description=merlin.__description__,
@@ -29,7 +27,7 @@ setup(name='merlin',
       keywords='merlin rpg game engine',
       author=merlin.__author__,
       author_email=merlin.__email__,
-      url='https://www.github.com/lerrua/merlin',
+      url='https://www.github.com/lerrua/merlin-engine',
       license=merlin.__license__,
       packages=find_packages(exclude=('docs')),
       namespace_packages=['merlin'],
