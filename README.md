@@ -25,10 +25,10 @@ Prepare opponents for the battle, basically are two dicts with attributes 'base_
 >>> from merlin.engine.battle import Prepare
 
 # using sample characters and monsters
->>> from merlin.fixtures import aragorn, orc
+>>> from merlin.fixtures import ARAGORN, ORC
 
->>> hero = Prepare(**aragorn)
->>> foe = Prepare(**orc)
+>>> hero = Prepare(ARAGORN)
+>>> foe = Prepare(ORC)
 
 >>> foe.status
 {'base_hp': 90, 'name': 'Orc', 'base_attack': 20}
