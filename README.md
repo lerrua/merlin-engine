@@ -4,7 +4,7 @@ Merlin Engine
 
 Merlin is a micro-engine written in Python for build RPG Games.
 
-It's a just for fun project, made for learn, search and improve my knowledge about create my own RPG engine, hope you like and help me improve it. 
+It's for fun, made to learn, search and improve my knowledge about create my own RPG engine, hope you like and help me improve it. 
 The goal is keep using pure Python for be used everywhere, any lib, desktop or web application. 
 
 
