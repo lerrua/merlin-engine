@@ -31,10 +31,10 @@ Prepare opponents for the battle, basically are two dicts with attributes 'base_
 >>> foe = Prepare(orc)
 
 >>> foe.status
-{'base_hp': 90, 'name': 'Orc', 'base_attack': 20}
+{'base_hp': 90, 'name': 'Orc', 'base_attack': 20, is_dead: False}
 
 >>> hero.status
-{'base_hp': 170, 'name': 'Aragorn', 'base_attack': 50}
+{'base_hp': 170, 'name': 'Aragorn', 'base_attack': 50, is_dead: False}
 ```
 
 Here's a sample battle:
@@ -42,13 +42,13 @@ Here's a sample battle:
 >>> hero.attack(foe)
 40
 >>> foe.status
-{'base_hp': 40, 'name': 'Orc', 'base_attack': 20}
+{'base_hp': 40, 'name': 'Orc', 'base_attack': 20, is_dead: False}
 
 >>> hero.attack(foe)
 foe is dead.
 -10
 >>> foe.status
-{'base_hp': -10, 'name': 'Orc', 'base_attack': 20}
+{'base_hp': -10, 'name': 'Orc', 'base_attack': 20, is_dead: True}
 ```
 
 We have some available actions after battle.
