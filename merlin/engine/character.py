@@ -3,6 +3,7 @@ class Character(object):
         self.name = name
         self.base_attack = base_attack
         self.base_hp = base_hp
+        self.is_dead = False
 
     @property
     def status(self):

@@ -24,7 +24,7 @@ Prepare opponents for the battle, basically are two dicts with attributes 'base_
 ```python
 >>> from merlin.engine.battle import Prepare
 
-# using sample characters and monsters
+# using sample heroes and monsters
 >>> from merlin.fixtures import aragorn, orc
 
 >>> hero = Prepare(aragorn)
