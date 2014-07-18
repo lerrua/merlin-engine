@@ -57,8 +57,8 @@ We have some available actions after battle.
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "merlin/engine/battle.py", line 22, in attack
-    raise Exception('foe is already dead! Stop hit him!')
-Exception: foe is already dead! Stop hit him!
+    raise DeadException('foe is already dead! Stop hit him!')
+DeadException: foe is already dead! Stop hit him!
 
 # don't hit the dead body, collect the droppable items
 >>> hero.collect(foe)

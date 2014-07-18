@@ -1,4 +1,5 @@
 from merlin.engine.character import Monster
+from merlin.exceptions import DeadException
 
 
 class Prepare(object):
@@ -17,7 +18,7 @@ class Prepare(object):
             raise TypeError('foe should be a Monster object')
 
         if foe.base_hp <= 0:
-            raise Exception('foe is already dead! Stop hit him!')
+            raise DeadException('foe is already dead! Stop hit him!')
 
         foe.base_hp = foe.base_hp - self.char.base_attack
 

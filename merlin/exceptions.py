@@ -1,0 +1,2 @@
+class DeadException(Exception):
+    pass
