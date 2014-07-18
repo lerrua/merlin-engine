@@ -16,7 +16,7 @@ class Prepare(object):
     def status(self):
         return self.char.status
 
-    def set_hit(self, attack):
+    def set_damage(self, attack):
         return attack
 
     def attack(self, foe):
@@ -26,7 +26,7 @@ class Prepare(object):
         if foe.is_dead:
             raise DeadException('foe is already dead! Stop hit him!')
 
-        foe.base_hp = foe.base_hp - self.set_hit(self.char.base_attack)
+        foe.base_hp = foe.base_hp - self.set_damage(self.char.base_attack)
 
         if foe.base_hp <= 0:
             foe.is_dead = True
