@@ -16,6 +16,9 @@ class Prepare(object):
     def status(self):
         return self.char.status
 
+    def set_hit(self, attack):
+        return attack
+
     def attack(self, foe):
         if not isinstance(foe, Monster):
             raise TypeError('foe should be a Monster object')
@@ -23,7 +26,7 @@ class Prepare(object):
         if foe.is_dead:
             raise DeadException('foe is already dead! Stop hit him!')
 
-        foe.base_hp = foe.base_hp - self.char.base_attack
+        foe.base_hp = foe.base_hp - self.set_hit(self.char.base_attack)
 
         if foe.base_hp <= 0:
             foe.is_dead = True
