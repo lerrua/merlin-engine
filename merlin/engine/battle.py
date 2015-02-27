@@ -32,8 +32,3 @@ class Prepare(object):
             foe.is_dead = True
             print 'foe is dead.' if SHOW_MESSAGES else None
         return foe.base_hp
-
-    def collect(self, foe):
-        if not isinstance(foe, Monster):
-            raise TypeError('foe should be a Monster object')
-        pass
