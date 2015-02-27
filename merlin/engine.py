@@ -5,12 +5,13 @@ SHOW_MESSAGES = getattr(configs, 'SHOW_MESSAGES', False)
 
 
 class Character(object):
-    def __init__(self, name, base_attack, base_hp):
+    def __init__(self, name, base_attack, base_hp, extra={}):
         self.name = name
         self.base_attack = base_attack
         self.base_hp = base_hp
         self.is_dead = False
         self.battle = Prepare(self)
+        self.extra = extra
         self.item = Item(self)
 
     @property
