@@ -32,6 +32,6 @@ setup(name='merlin',
       packages=find_packages(exclude=('docs')),
       namespace_packages=['merlin'],
       package_dir={'merlin': 'merlin'},
-      install_requires=[],
+      install_requires=['PyYAML'],
       include_package_data=True,
       zip_safe=False)
